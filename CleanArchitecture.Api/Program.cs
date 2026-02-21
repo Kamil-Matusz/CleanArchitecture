@@ -1,3 +1,7 @@
+using CleanArchitecture.Application;
+using CleanArchitecture.Core;
+using CleanArchitecture.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+
+builder.Services
+    .AddCore()
+    .AddApplication(builder.Configuration)
+    .AddInfrastructure(builder.Configuration);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -1,0 +1,14 @@
+﻿{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Awahir",
+  "classifications": [ "Web", "Onion", "Clean" ],
+  "name": "My Clean Architecture Template",
+  "identity": "My.CleanArch.Template",
+  "shortName": "clean-onion",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "CleanArchitecture",
+  "preferNameDirectory": true
+}

@@ -15,5 +15,6 @@
 
     <ItemGroup>
         <Content Include="**\*" Exclude="**\bin\**;**\obj\**;**\.vs\**;**\.idea\**;**\.git\**;**\*.user;**\*.nupkg" />
+        <Compile Remove="**\*" />
     </ItemGroup>
 </Project>

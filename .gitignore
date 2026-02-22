@@ -400,3 +400,6 @@ FodyWeavers.xsd
 .DS_Store
 
 .cursorrules
+
+# Pack output
+dist/

@@ -11,6 +11,15 @@
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <ContentTargetFolders>content</ContentTargetFolders>
         <NoDefaultExcludes>true</NoDefaultExcludes>
+        <PackageReleaseNotes>
+## 1.0.0
+- Initial release of the Clean Architecture (clean-onion) dotnet new template
+- Four-layer solution: Core, Application, Infrastructure, Api
+- DI extensions in each layer
+- ASP.NET Core 9 Web API with OpenAPI support
+
+Full changelog: https://github.com/Awahir/CleanArchitecture/blob/main/CHANGELOG.md
+        </PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>

@@ -11,19 +11,18 @@
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <ContentTargetFolders>content</ContentTargetFolders>
         <NoDefaultExcludes>true</NoDefaultExcludes>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
         <PackageReleaseNotes>
-## 1.0.0
-- Initial release of the Clean Architecture (clean-onion) dotnet new template
-- Four-layer solution: Core, Application, Infrastructure, Api
-- DI extensions in each layer
-- ASP.NET Core 9 Web API with OpenAPI support
-
-Full changelog: https://github.com/Awahir/CleanArchitecture/blob/main/CHANGELOG.md
+        ## 1.0.0
+        - Initial release of the Clean Architecture (clean-onion) dotnet new template
+        - Four-layer solution: Core, Application, Infrastructure, Api
+        - DI extensions in each layer
+        - ASP.NET Core 9 Web API with OpenAPI support
         </PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include="**\*" Exclude="**\bin\**;**\obj\**;**\.vs\**;**\.idea\**;**\.git\**;**\*.user;**\*.nupkg" />
-        <Compile Remove="**\*" />
+        <Content Include="**\*"
+                 Exclude="**\bin\**;**\obj\**;**\.vs\**;**\.idea\**;**\.git\**;dist\**;*.nupkg;**\*.user;CleanArchitecture.Template.csproj" />
     </ItemGroup>
 </Project>

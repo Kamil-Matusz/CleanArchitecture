@@ -12,6 +12,7 @@
         <ContentTargetFolders>content</ContentTargetFolders>
         <NoDefaultExcludes>true</NoDefaultExcludes>
         <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+        <PackageReadmeFile>README.nuget.md</PackageReadmeFile>
         <PackageReleaseNotes>
         ## 1.0.0
         - Initial release of the Clean Architecture (clean-onion) dotnet new template
@@ -23,6 +24,7 @@
 
     <ItemGroup>
         <Content Include="**\*"
-                 Exclude="**\bin\**;**\obj\**;**\.vs\**;**\.idea\**;**\.git\**;dist\**;*.nupkg;**\*.user;CleanArchitecture.Template.csproj" />
+                 Exclude="**\bin\**;**\obj\**;**\.vs\**;**\.idea\**;**\.git\**;dist\**;*.nupkg;**\*.user;CleanArchitecture.Template.csproj;README.md" />
+        <None Include="README.nuget.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 </Project>

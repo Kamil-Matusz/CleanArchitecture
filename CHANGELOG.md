@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `README.nuget.md` – dedicated README displayed on nuget.org package page
+- `PackageReadmeFile` property in `CleanArchitecture.Template.csproj` pointing to `README.nuget.md`
+
+### Changed
+- Excluded `README.nuget.md` from template content so it is not scaffolded into generated projects
+
 ## [1.0.0] - 2026-02-23
 
 ### Added

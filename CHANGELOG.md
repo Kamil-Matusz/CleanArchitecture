@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-02-25
+
 ### Added
 - `README.nuget.md` – dedicated README displayed on nuget.org package page
 - `PackageReadmeFile` property in `CleanArchitecture.Template.csproj` pointing to `README.nuget.md`
@@ -23,5 +25,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ASP.NET Core 9 Web API entry point with OpenAPI (Swagger) support in Development
 - Nullable reference types enabled by default
 
-[Unreleased]: https://github.com/Awahir/CleanArchitecture/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/Awahir/CleanArchitecture/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/Awahir/CleanArchitecture/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/Awahir/CleanArchitecture/releases/tag/v1.0.0

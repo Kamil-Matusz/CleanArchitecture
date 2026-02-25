@@ -4,7 +4,7 @@
         <PackageId>My.CleanArchitecture.Pack</PackageId>
         <Title>Custom Clean Architecture Template</Title>
         <Authors>Awahir</Authors>
-        <PackageVersion>1.0.0</PackageVersion>
+        <PackageVersion>1.0.1</PackageVersion>
         <TargetFramework>net9.0</TargetFramework>
 
         <IncludeContentInPack>true</IncludeContentInPack>
@@ -14,6 +14,9 @@
         <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
         <PackageReadmeFile>README.nuget.md</PackageReadmeFile>
         <PackageReleaseNotes>
+        ## 1.0.1
+        - Add dedicated README for NuGet package page (README.nuget.md)
+
         ## 1.0.0
         - Initial release of the Clean Architecture (clean-onion) dotnet new template
         - Four-layer solution: Core, Application, Infrastructure, Api

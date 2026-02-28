@@ -17,8 +17,31 @@ jobs:
         with:
           dotnet-version: '9.0.x'
 
+      - name: Extract version from CHANGELOG
+        id: version
+        run: |
+          VERSION=$(grep -m1 '## \[[0-9]' CHANGELOG.md | sed 's/.*\[\([0-9.]*\)\].*/\1/')
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Detected version: $VERSION"
+
+      - name: Check if version already exists on NuGet
+        id: check
+        run: |
+          VERSION=${{ steps.version.outputs.version }}
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            "https://api.nuget.org/v3-flatcontainer/my.cleanarchitecture.pack/$VERSION/my.cleanarchitecture.pack.$VERSION.nupkg")
+          if [ "$STATUS" = "200" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "Version $VERSION already published, skipping."
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "Version $VERSION is new, will publish."
+          fi
+
       - name: Pack Template
-        run: dotnet pack CleanArchitecture.Template.csproj -c Release -o ./dist
+        if: steps.check.outputs.exists == 'false'
+        run: dotnet pack CleanArchitecture.Template.csproj -c Release -o ./dist -p:PackageVersion=${{ steps.version.outputs.version }}
 
       - name: Push to NuGet
+        if: steps.check.outputs.exists == 'false'
         run: dotnet nuget push ./dist/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json

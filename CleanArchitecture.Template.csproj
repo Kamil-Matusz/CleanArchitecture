@@ -4,7 +4,7 @@
         <PackageId>My.CleanArchitecture.Pack</PackageId>
         <Title>Custom Clean Architecture Template</Title>
         <Authors>Awahir</Authors>
-        <PackageVersion>1.0.1</PackageVersion>
+        <PackageVersion>1.0.2</PackageVersion>
         <TargetFramework>net9.0</TargetFramework>
 
         <IncludeContentInPack>true</IncludeContentInPack>

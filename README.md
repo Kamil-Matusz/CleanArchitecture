@@ -1,7 +1,8 @@
-# Clean Architecture Template for .NET 9
+# Clean Architecture Template for .NET 8 / .NET 9
 
 [![NuGet](https://img.shields.io/nuget/v/My.CleanArchitecture.Pack?label=NuGet&logo=nuget)](https://www.nuget.org/packages/My.CleanArchitecture.Pack)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/My.CleanArchitecture.Pack?label=Downloads)](https://www.nuget.org/packages/My.CleanArchitecture.Pack)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A lightweight, opinionated **`dotnet new` project template** for ASP.NET Core Web API applications following the principles of Clean Architecture (Onion Architecture).
 
@@ -36,7 +37,7 @@ Api → Infrastructure → Application → Core
 
 ## Requirements
 
-- [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9)
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8) or [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9)
 
 ## NuGet Package
 
@@ -45,6 +46,20 @@ This template is published as a NuGet package and is available on **NuGet.org**:
 📦 **[My.CleanArchitecture.Pack](https://www.nuget.org/packages/My.CleanArchitecture.Pack)**
 
 You can install it directly using the .NET CLI without cloning this repository — see the [Installation](#installation) section below.
+
+## Quick Start
+
+```bash
+# 1. Install the template
+dotnet new install My.CleanArchitecture.Pack
+
+# 2. Scaffold a new project
+dotnet new clean-onion -n MyProject
+
+# 3. Navigate to the project and run the API
+cd MyProject
+dotnet run --project MyProject.Api
+```
 
 ## Installation
 
@@ -62,6 +77,12 @@ dotnet pack CleanArchitecture.Template.csproj -o dist
 
 # 2. Install the packed template
 dotnet new install ./dist/My.CleanArchitecture.Pack.1.0.0.nupkg
+```
+
+## Usage
+
+```bash
+dotnet new clean-onion -n MyProject
 ```
 
 ## Project Structure (after scaffolding)
@@ -88,11 +109,15 @@ dotnet new uninstall My.CleanArchitecture.Pack
 
 ## Technology Stack
 
-- **Runtime**: .NET 9
-- **Framework**: ASP.NET Core 9 Web API
+- **Runtime**: .NET 8 / .NET 9
+- **Framework**: ASP.NET Core Web API
 - **API Documentation**: Microsoft.AspNetCore.OpenApi (built-in OpenAPI support)
 - **DI**: `Microsoft.Extensions.DependencyInjection`
 - **Language**: C# with nullable reference types enabled
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for the full version history.
 
 ## Contributing
 

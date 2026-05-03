@@ -1,4 +1,4 @@
-# Clean Architecture Template for .NET 9
+# Clean Architecture Template for .NET 8 / .NET 9 / .NET 10
 
 A lightweight, opinionated **`dotnet new` project template** for ASP.NET Core Web API applications following the principles of Clean Architecture (Onion Architecture).
 
@@ -33,7 +33,7 @@ Api → Infrastructure → Application → Core
 
 ## Requirements
 
-- [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10) (recommended, LTS), [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9), or [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8)
 
 ## Installation
 
@@ -71,8 +71,8 @@ dotnet new uninstall My.CleanArchitecture.Pack
 
 ## Technology Stack
 
-- **Runtime**: .NET 9
-- **Framework**: ASP.NET Core 9 Web API
+- **Runtime**: .NET 8 / .NET 9 / .NET 10
+- **Framework**: ASP.NET Core Web API
 - **API Documentation**: Microsoft.AspNetCore.OpenApi (built-in OpenAPI support)
 - **DI**: `Microsoft.Extensions.DependencyInjection`
 - **Language**: C# with nullable reference types enabled

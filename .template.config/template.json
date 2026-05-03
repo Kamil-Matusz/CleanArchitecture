@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "http://json.schemastore.org/template",
   "author": "Awahir",
   "classifications": [ "Web", "Onion", "Clean" ],
@@ -32,16 +32,20 @@
       "datatype": "choice",
       "choices": [
         {
+          "choice": "net10.0",
+          "description": ".NET 10 LTS (default)"
+        },
+        {
           "choice": "net9.0",
-          "description": ".NET 9 (default)"
+          "description": ".NET 9"
         },
         {
           "choice": "net8.0",
           "description": ".NET 8 LTS"
         }
       ],
-      "defaultValue": "net9.0",
-      "replaces": "net9.0"
+      "defaultValue": "net10.0",
+      "replaces": "net10.0"
     }
   }
 }

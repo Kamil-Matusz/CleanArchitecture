@@ -1,4 +1,4 @@
-# Clean Architecture Template for .NET 8 / .NET 9
+# Clean Architecture Template for .NET 8 / .NET 9 / .NET 10
 
 [![NuGet](https://img.shields.io/nuget/v/My.CleanArchitecture.Pack?label=NuGet&logo=nuget)](https://www.nuget.org/packages/My.CleanArchitecture.Pack)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/My.CleanArchitecture.Pack?label=Downloads)](https://www.nuget.org/packages/My.CleanArchitecture.Pack)
@@ -37,7 +37,7 @@ Api → Infrastructure → Application → Core
 
 ## Requirements
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8) or [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10) (recommended, LTS), [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9), or [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8)
 
 ## NuGet Package
 
@@ -85,6 +85,17 @@ dotnet new install ./dist/My.CleanArchitecture.Pack.1.0.0.nupkg
 dotnet new clean-onion -n MyProject
 ```
 
+### Target Framework Selection
+
+By default, the template targets **.NET 10** (LTS). You can choose a different framework using the `--Framework` parameter:
+
+| Command | Target Framework |
+|---|---|
+| `dotnet new clean-onion -n MyProject` | .NET 10 (default) |
+| `dotnet new clean-onion -n MyProject --Framework net10.0` | .NET 10 LTS |
+| `dotnet new clean-onion -n MyProject --Framework net9.0` | .NET 9 |
+| `dotnet new clean-onion -n MyProject --Framework net8.0` | .NET 8 LTS |
+
 ## Project Structure (after scaffolding)
 
 ```
@@ -101,15 +112,21 @@ MyProject/
 └── MyProject.sln
 ```
 
-## Uninstalling the Template
+## CLI Commands Reference
 
-```bash
-dotnet new uninstall My.CleanArchitecture.Pack
-```
+| Action | Command |
+|---|---|
+| **Install template** | `dotnet new install My.CleanArchitecture.Pack` |
+| **Scaffold a project** | `dotnet new clean-onion -n MyProject` |
+| **Scaffold with specific framework** | `dotnet new clean-onion -n MyProject --Framework net9.0` |
+| **List installed templates** | `dotnet new list clean-onion` |
+| **Show template options** | `dotnet new clean-onion --help` |
+| **Update template** | `dotnet new install My.CleanArchitecture.Pack` |
+| **Uninstall template** | `dotnet new uninstall My.CleanArchitecture.Pack` |
 
 ## Technology Stack
 
-- **Runtime**: .NET 8 / .NET 9
+- **Runtime**: .NET 8 / .NET 9 / .NET 10
 - **Framework**: ASP.NET Core Web API
 - **API Documentation**: Microsoft.AspNetCore.OpenApi (built-in OpenAPI support)
 - **DI**: `Microsoft.Extensions.DependencyInjection`

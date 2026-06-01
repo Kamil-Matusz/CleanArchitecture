@@ -11,20 +11,6 @@
   },
   "sourceName": "CleanArchitecture",
   "preferNameDirectory": true,
-  "specialCustomOperations": {
-    "**/*.csproj": {
-      "operations": [
-        {
-          "type": "conditional",
-          "configuration": {
-            "style": "xml",
-            "evaluate": true,
-            "evaluator": "C++"
-          }
-        }
-      ]
-    }
-  },
   "symbols": {
     "Framework": {
       "type": "parameter",

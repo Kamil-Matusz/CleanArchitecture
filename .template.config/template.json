@@ -11,6 +11,21 @@
   },
   "sourceName": "CleanArchitecture",
   "preferNameDirectory": true,
+  "sources": [
+    {
+      "include": [
+        "CleanArchitecture.sln",
+        "CleanArchitecture.Api/**",
+        "CleanArchitecture.Application/**",
+        "CleanArchitecture.Core/**",
+        "CleanArchitecture.Infrastructure/**"
+      ],
+      "exclude": [
+        "**/bin/**",
+        "**/obj/**"
+      ]
+    }
+  ],
   "symbols": {
     "Framework": {
       "type": "parameter",

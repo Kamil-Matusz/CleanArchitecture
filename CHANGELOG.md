@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.4] - 2026-06-01
+### Changed
+- Limited generated template output to the four Clean Architecture projects
+- Excluded repository, package, and build artifacts from generated projects
+
 ## [1.0.3] - 2026-05-03
 ### Added
 - .NET 10 LTS support (default target framework)
@@ -37,7 +42,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ASP.NET Core 9 Web API entry point with OpenAPI (Swagger) support in Development
 - Nullable reference types enabled by default
 
-[Unreleased]: https://github.com/Awahir/CleanArchitecture/compare/v1.0.3...HEAD
+[Unreleased]: https://github.com/Awahir/CleanArchitecture/compare/v1.0.4...HEAD
+[1.0.4]: https://github.com/Awahir/CleanArchitecture/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/Awahir/CleanArchitecture/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/Awahir/CleanArchitecture/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/Awahir/CleanArchitecture/compare/v1.0.0...v1.0.1

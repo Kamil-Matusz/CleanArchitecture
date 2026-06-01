@@ -4,7 +4,7 @@
         <PackageId>My.CleanArchitecture.Pack</PackageId>
         <Title>Custom Clean Architecture Template</Title>
         <Authors>Awahir</Authors>
-        <PackageVersion>1.0.3</PackageVersion>
+        <PackageVersion>1.0.4</PackageVersion>
         <TargetFramework>net10.0</TargetFramework>
 
         <IncludeContentInPack>true</IncludeContentInPack>
@@ -14,6 +14,10 @@
         <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
         <PackageReadmeFile>README.nuget.md</PackageReadmeFile>
         <PackageReleaseNotes>
+        ## 1.0.4
+        - Limit generated template output to the four Clean Architecture projects
+        - Exclude repository, package, and build artifacts from generated projects
+
         ## 1.0.3
         - Add .NET 10 LTS support (default target framework)
         - Update NuGet package versions for all supported frameworks
@@ -30,8 +34,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include="**\*"
-                 Exclude="**\bin\**;**\obj\**;**\.vs\**;**\.idea\**;**\.git\**;dist\**;*.nupkg;**\*.user;CleanArchitecture.Template.csproj;README.md" />
+        <Content Include=".template.config\**\*" />
+        <Content Include="CleanArchitecture.sln" />
+        <Content Include="CleanArchitecture.Api\**\*" Exclude="**\bin\**;**\obj\**;**\*.user" />
+        <Content Include="CleanArchitecture.Application\**\*" Exclude="**\bin\**;**\obj\**;**\*.user" />
+        <Content Include="CleanArchitecture.Core\**\*" Exclude="**\bin\**;**\obj\**;**\*.user" />
+        <Content Include="CleanArchitecture.Infrastructure\**\*" Exclude="**\bin\**;**\obj\**;**\*.user" />
         <None Include="README.nuget.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 </Project>
